@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,173 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JaviSays" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eg-Wj-TLf">
+                                <rect key="frame" x="41.5" y="762" width="331" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-fl-MKK">
+                                        <rect key="frame" x="8" y="8" width="204.5" height="38"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-vW-xOa">
+                                        <rect key="frame" x="220.5" y="8" width="102.5" height="38"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jugador 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noV-uW-eJm">
+                                        <rect key="frame" x="8" y="54" width="204.5" height="38"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXD-uG-vQh">
+                                        <rect key="frame" x="220.5" y="54" width="102.5" height="38"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jXD-uG-vQh" secondAttribute="bottom" constant="8" id="4Sa-Bu-n5x"/>
+                                    <constraint firstAttribute="bottom" secondItem="jXD-uG-vQh" secondAttribute="bottom" constant="8" id="56C-H3-AGQ"/>
+                                    <constraint firstItem="jXD-uG-vQh" firstAttribute="width" secondItem="noV-uW-eJm" secondAttribute="width" multiplier="0.5" id="9ke-ZR-vpL"/>
+                                    <constraint firstAttribute="bottom" secondItem="noV-uW-eJm" secondAttribute="bottom" constant="8" id="C86-Pv-Tb7"/>
+                                    <constraint firstAttribute="bottom" secondItem="noV-uW-eJm" secondAttribute="bottom" constant="8" id="CE9-Kj-NFD"/>
+                                    <constraint firstItem="ORw-vW-xOa" firstAttribute="leading" secondItem="0JZ-fl-MKK" secondAttribute="trailing" constant="8" id="FS0-6w-SI0"/>
+                                    <constraint firstAttribute="trailing" secondItem="jXD-uG-vQh" secondAttribute="trailing" constant="8" id="H2p-os-LgT"/>
+                                    <constraint firstItem="noV-uW-eJm" firstAttribute="height" secondItem="0JZ-fl-MKK" secondAttribute="height" id="P2p-1v-PSd"/>
+                                    <constraint firstItem="0JZ-fl-MKK" firstAttribute="top" secondItem="9eg-Wj-TLf" secondAttribute="top" constant="8" id="Ska-7j-ffK"/>
+                                    <constraint firstItem="noV-uW-eJm" firstAttribute="leading" secondItem="9eg-Wj-TLf" secondAttribute="leading" constant="8" id="UwD-Jr-Xft"/>
+                                    <constraint firstItem="jXD-uG-vQh" firstAttribute="leading" secondItem="noV-uW-eJm" secondAttribute="trailing" constant="8" id="a73-zA-EIt"/>
+                                    <constraint firstItem="noV-uW-eJm" firstAttribute="top" secondItem="0JZ-fl-MKK" secondAttribute="bottom" constant="8" id="aPl-77-jcm"/>
+                                    <constraint firstItem="ORw-vW-xOa" firstAttribute="width" secondItem="0JZ-fl-MKK" secondAttribute="width" multiplier="0.5" id="bFD-g1-m4s"/>
+                                    <constraint firstAttribute="height" constant="100" id="eGB-PC-qu5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ORw-vW-xOa" secondAttribute="trailing" constant="8" id="f7q-HU-Rig"/>
+                                    <constraint firstAttribute="bottom" secondItem="noV-uW-eJm" secondAttribute="bottom" constant="8" id="gbG-n3-eC6"/>
+                                    <constraint firstItem="ORw-vW-xOa" firstAttribute="top" secondItem="9eg-Wj-TLf" secondAttribute="top" constant="8" id="hvr-g9-nv3"/>
+                                    <constraint firstItem="jXD-uG-vQh" firstAttribute="height" secondItem="ORw-vW-xOa" secondAttribute="height" id="peN-u5-Bk0"/>
+                                    <constraint firstItem="noV-uW-eJm" firstAttribute="top" secondItem="ORw-vW-xOa" secondAttribute="bottom" constant="8" id="scS-Q4-T4n"/>
+                                    <constraint firstItem="0JZ-fl-MKK" firstAttribute="leading" secondItem="9eg-Wj-TLf" secondAttribute="leading" constant="8" id="t2F-Ei-FoO"/>
+                                    <constraint firstAttribute="bottom" secondItem="noV-uW-eJm" secondAttribute="bottom" constant="8" id="xP0-q9-Uct"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-zA-Its">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l6H-3X-7uB">
+                                        <rect key="frame" x="41.5" y="215.5" width="331" height="331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NxJ-ew-0r6">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tui-t4-as3" customClass="CircularButton" customModule="JaviSays" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" red="0.84803082191780821" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="colorButtonHandller:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fI-zK-Oge"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3z-XP-huX" customClass="CircularButton" customModule="JaviSays" customModuleProvider="target">
+                                                        <rect key="frame" x="169.5" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="colorButtonHandller:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rl-Oo-dgf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vOW-Ne-mje">
+                                                <rect key="frame" x="0.0" y="169.5" width="331" height="161.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-NZ-86u" customClass="CircularButton" customModule="JaviSays" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="colorButtonHandller:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4y-sV-QZl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-e3-LRc" customClass="CircularButton" customModule="JaviSays" customModuleProvider="target">
+                                                        <rect key="frame" x="169.5" y="0.0" width="161.5" height="161.5"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="colorButtonHandller:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STv-Rn-dVB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="l6H-3X-7uB" secondAttribute="height" multiplier="1:1" id="2RI-1F-dgp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-Qe-6rx">
+                                        <rect key="frame" x="41.5" y="554.5" width="331" height="199.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                        <state key="normal" title="Action Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCy-b2-aan"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Javier Dice ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-ob-FHG">
+                                        <rect key="frame" x="41.5" y="8" width="331" height="199.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87620398116438358" green="0.9115624160191782" blue="0.89633507086301367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aLY-ob-FHG" firstAttribute="top" secondItem="Yjh-zA-Its" secondAttribute="top" constant="8" id="Dv5-4V-WcL"/>
+                                    <constraint firstItem="l6H-3X-7uB" firstAttribute="centerY" secondItem="Yjh-zA-Its" secondAttribute="centerY" id="EDs-4k-js4"/>
+                                    <constraint firstItem="aLY-ob-FHG" firstAttribute="centerX" secondItem="Yjh-zA-Its" secondAttribute="centerX" id="GPR-8P-UhA"/>
+                                    <constraint firstItem="gqd-Qe-6rx" firstAttribute="width" secondItem="l6H-3X-7uB" secondAttribute="width" id="OUT-th-3YA"/>
+                                    <constraint firstItem="aLY-ob-FHG" firstAttribute="width" secondItem="l6H-3X-7uB" secondAttribute="width" id="PuP-C8-dVL"/>
+                                    <constraint firstAttribute="bottom" secondItem="gqd-Qe-6rx" secondAttribute="bottom" constant="8" id="Ts9-rY-ObL"/>
+                                    <constraint firstItem="gqd-Qe-6rx" firstAttribute="top" secondItem="l6H-3X-7uB" secondAttribute="bottom" constant="8" id="ePB-0e-6JZ"/>
+                                    <constraint firstItem="gqd-Qe-6rx" firstAttribute="centerX" secondItem="Yjh-zA-Its" secondAttribute="centerX" id="i57-RI-1WZ"/>
+                                    <constraint firstItem="l6H-3X-7uB" firstAttribute="centerX" secondItem="Yjh-zA-Its" secondAttribute="centerX" id="wyU-Ke-hxQ"/>
+                                    <constraint firstItem="l6H-3X-7uB" firstAttribute="top" secondItem="aLY-ob-FHG" secondAttribute="bottom" constant="8" id="zNd-Ay-T2r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34509803919999998" green="0.43611513316438355" blue="0.47745947910821918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9eg-Wj-TLf" firstAttribute="top" secondItem="Yjh-zA-Its" secondAttribute="bottom" id="UOJ-m1-PXp"/>
+                            <constraint firstItem="9eg-Wj-TLf" firstAttribute="width" secondItem="gqd-Qe-6rx" secondAttribute="width" id="bQX-ta-tpr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9eg-Wj-TLf" secondAttribute="bottom" id="jWY-Wp-NF0"/>
+                            <constraint firstItem="9eg-Wj-TLf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kqw-jk-XSK"/>
+                            <constraint firstItem="Yjh-zA-Its" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ls4-dW-N3s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yjh-zA-Its" secondAttribute="trailing" id="nJy-B9-E6c"/>
+                            <constraint firstItem="Yjh-zA-Its" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pZC-SG-paO"/>
+                            <constraint firstItem="l6H-3X-7uB" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="xut-Bq-MQH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="gqd-Qe-6rx" id="nKm-Lk-tTa"/>
+                        <outletCollection property="colorButtons" destination="n3z-XP-huX" collectionClass="NSMutableArray" id="GRc-zv-HYI"/>
+                        <outletCollection property="colorButtons" destination="tui-t4-as3" collectionClass="NSMutableArray" id="ABF-yV-evO"/>
+                        <outletCollection property="colorButtons" destination="mfN-NZ-86u" collectionClass="NSMutableArray" id="P8Q-uC-VRi"/>
+                        <outletCollection property="colorButtons" destination="ixS-e3-LRc" collectionClass="NSMutableArray" id="tjz-VQ-7aB"/>
+                        <outletCollection property="playerLabels" destination="0JZ-fl-MKK" collectionClass="NSMutableArray" id="2bZ-Xa-tfV"/>
+                        <outletCollection property="playerLabels" destination="noV-uW-eJm" collectionClass="NSMutableArray" id="JEa-aT-cwn"/>
+                        <outletCollection property="scoreLabels" destination="ORw-vW-xOa" collectionClass="NSMutableArray" id="MUZ-hh-YNf"/>
+                        <outletCollection property="scoreLabels" destination="jXD-uG-vQh" collectionClass="NSMutableArray" id="60h-83-j2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
