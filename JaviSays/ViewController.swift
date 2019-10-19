@@ -174,19 +174,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enableDisableSoundAction(_ sender: UIButton) {
-        enableDisableSound(button: sender)
-        switchMuted()
-    }
-
-    private func enableDisableSound(button: UIButton) {
         if isMuted  {
-            button.setImage(soundActiveImage, for: .normal)
+           sender.setImage(soundActiveImage, for: .normal)
         } else {
-            button.setImage(soundInactiveImage, for: .normal)
+           sender.setImage(soundInactiveImage, for: .normal)
         }
-    }
-    
-    private func switchMuted(){
         isMuted = !isMuted
         defaults.set(isMuted, forKey: "Muted")
     }
