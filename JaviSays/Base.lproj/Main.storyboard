@@ -148,11 +148,29 @@
                                     <constraint firstItem="l6H-3X-7uB" firstAttribute="top" secondItem="aLY-ob-FHG" secondAttribute="bottom" constant="8" id="zNd-Ay-T2r"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrc-AN-Dg3" customClass="CircularButton" customModule="JaviSays" customModuleProvider="target">
+                                <rect key="frame" x="16" y="34" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a0Z-og-DYJ"/>
+                                    <constraint firstAttribute="width" secondItem="jrc-AN-Dg3" secondAttribute="height" multiplier="1:1" id="mRJ-8I-7ED"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="speaker.2" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasAlpha" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enableDisableSoundAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xcs-ks-3lO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34509803919999998" green="0.43611513316438355" blue="0.47745947910821918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9eg-Wj-TLf" firstAttribute="top" secondItem="Yjh-zA-Its" secondAttribute="bottom" id="UOJ-m1-PXp"/>
                             <constraint firstItem="9eg-Wj-TLf" firstAttribute="width" secondItem="gqd-Qe-6rx" secondAttribute="width" id="bQX-ta-tpr"/>
+                            <constraint firstItem="jrc-AN-Dg3" firstAttribute="centerY" secondItem="aLY-ob-FHG" secondAttribute="centerY" multiplier="0.5" id="d8H-nE-JpK"/>
+                            <constraint firstItem="jrc-AN-Dg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i8a-YJ-c7B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9eg-Wj-TLf" secondAttribute="bottom" id="jWY-Wp-NF0"/>
                             <constraint firstItem="9eg-Wj-TLf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kqw-jk-XSK"/>
                             <constraint firstItem="Yjh-zA-Its" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ls4-dW-N3s"/>
@@ -164,6 +182,8 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="gqd-Qe-6rx" id="nKm-Lk-tTa"/>
+                        <outlet property="contentGameView" destination="Yjh-zA-Its" id="QnX-eb-Pmo"/>
+                        <outlet property="soundButton" destination="jrc-AN-Dg3" id="pVo-q3-A1R"/>
                         <outletCollection property="colorButtons" destination="n3z-XP-huX" collectionClass="NSMutableArray" id="GRc-zv-HYI"/>
                         <outletCollection property="colorButtons" destination="tui-t4-as3" collectionClass="NSMutableArray" id="ABF-yV-evO"/>
                         <outletCollection property="colorButtons" destination="mfN-NZ-86u" collectionClass="NSMutableArray" id="P8Q-uC-VRi"/>
@@ -179,4 +199,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="speaker.2" catalog="system" width="64" height="48"/>
+    </resources>
 </document>

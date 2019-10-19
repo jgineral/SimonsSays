@@ -13,6 +13,10 @@
 		0688A44B2354F94400020A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0688A4492354F94400020A89 /* Main.storyboard */; };
 		0688A44D2354F94700020A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0688A44C2354F94700020A89 /* Assets.xcassets */; };
 		0688A4502354F94700020A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0688A44E2354F94700020A89 /* LaunchScreen.storyboard */; };
+		069FD948235A6BE500AEBB4D /* note0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 069FD940235A667400AEBB4D /* note0.wav */; };
+		069FD949235A6BE800AEBB4D /* note1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 069FD943235A667500AEBB4D /* note1.wav */; };
+		069FD94A235A6BEB00AEBB4D /* note2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 069FD942235A667500AEBB4D /* note2.wav */; };
+		069FD94B235A6BEE00AEBB4D /* note3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 069FD946235A667500AEBB4D /* note3.wav */; };
 		06CD6D8623578C590055481C /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CD6D8523578C590055481C /* CircularButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		0688A44C2354F94700020A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0688A44F2354F94700020A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0688A4512354F94700020A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		069FD940235A667400AEBB4D /* note0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note0.wav; sourceTree = "<group>"; };
+		069FD942235A667500AEBB4D /* note2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note2.wav; sourceTree = "<group>"; };
+		069FD943235A667500AEBB4D /* note1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note1.wav; sourceTree = "<group>"; };
+		069FD946235A667500AEBB4D /* note3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note3.wav; sourceTree = "<group>"; };
 		06CD6D8523578C590055481C /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,8 +74,20 @@
 				0688A44E2354F94700020A89 /* LaunchScreen.storyboard */,
 				0688A4512354F94700020A89 /* Info.plist */,
 				06CD6D8523578C590055481C /* CircularButton.swift */,
+				069FD93F235A661500AEBB4D /* Sound Files */,
 			);
 			path = JaviSays;
+			sourceTree = "<group>";
+		};
+		069FD93F235A661500AEBB4D /* Sound Files */ = {
+			isa = PBXGroup;
+			children = (
+				069FD940235A667400AEBB4D /* note0.wav */,
+				069FD943235A667500AEBB4D /* note1.wav */,
+				069FD942235A667500AEBB4D /* note2.wav */,
+				069FD946235A667500AEBB4D /* note3.wav */,
+			);
+			name = "Sound Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +151,10 @@
 				0688A4502354F94700020A89 /* LaunchScreen.storyboard in Resources */,
 				0688A44D2354F94700020A89 /* Assets.xcassets in Resources */,
 				0688A44B2354F94400020A89 /* Main.storyboard in Resources */,
+				069FD94A235A6BEB00AEBB4D /* note2.wav in Resources */,
+				069FD949235A6BE800AEBB4D /* note1.wav in Resources */,
+				069FD94B235A6BEE00AEBB4D /* note3.wav in Resources */,
+				069FD948235A6BE500AEBB4D /* note0.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

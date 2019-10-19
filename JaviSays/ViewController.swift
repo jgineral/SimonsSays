@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var contentGameView: UIView!
     
     @IBOutlet var colorButtons: [CircularButton]!
     @IBOutlet weak var actionButton: UIButton!
     
     @IBOutlet var playerLabels: [UILabel]!
     @IBOutlet var scoreLabels: [UILabel]!
+    
+    @IBOutlet weak var soundButton: CircularButton!
     
     var currentPlayer = 0
     var scores = [0,0]
@@ -24,8 +29,24 @@ class ViewController: UIViewController {
     
     var gameEnded = false
     
+    var player: AVAudioPlayer?
+    var isMuted = false
+    var volumen: Float = 1.0
+    let soundActiveImage = UIImage(systemName: "speaker.2")
+    let soundInactiveImage = UIImage(systemName: "speaker.slash")
+    
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        isMuted = defaults.bool(forKey: "Muted")
+        
+        if isMuted  {
+            soundButton.setImage(soundInactiveImage, for: .normal)
+        } else {
+            soundButton.setImage(soundActiveImage, for: .normal)
+        }
+        
         colorButtons = colorButtons.sorted() { $0.tag < $1.tag }
         playerLabels = playerLabels.sorted() { $0.tag < $1.tag }
         scoreLabels = scoreLabels.sorted() { $0.tag < $1.tag }
@@ -46,7 +67,7 @@ class ViewController: UIViewController {
         actionButton.setTitle("Empezar Partida", for: .normal)
         actionButton.isEnabled = true
         for button in colorButtons {
-            button.alpha = 0.5
+            button.alpha = 0.4
             button.isEnabled = false
         }
         
@@ -79,7 +100,7 @@ class ViewController: UIViewController {
             sequenceIndex += 1
         } else {
             colorsToTap = colorSequence
-            view.isUserInteractionEnabled = true
+            contentGameView.isUserInteractionEnabled = true
             actionButton.setTitle("Reproduce la secuencia!", for: .normal)
             for button in colorButtons{
                 button.isEnabled = true
@@ -88,9 +109,10 @@ class ViewController: UIViewController {
     }
     
     private func flash(button: CircularButton) {
+        soundThisNote(note: "note\(button.tag)")
         UIView.animate(withDuration: 1, animations: {
             button.alpha = 1.0
-            button.alpha = 0.5
+            button.alpha = 0.4
         }) { (bool) in
             self.playSecuence()
         }
@@ -101,8 +123,24 @@ class ViewController: UIViewController {
         actionButton.setTitle(message, for: .normal)
         gameEnded = true
     }
+    
+    private func soundThisNote(note : String){
+        if !isMuted {
+            if let xylophoneSound = Bundle.main.url(forResource: note, withExtension: "wav") {
+                print(note)
+                do {
+                    player = try AVAudioPlayer(contentsOf: xylophoneSound, fileTypeHint: AVFileType.wav.rawValue)
+                    player?.play()
+                    
+                } catch let error as NSError {
+                    print(error.description)
+                }
+            }
+        }
+    }
 
     @IBAction func colorButtonHandller(_ sender: CircularButton) {
+        soundThisNote(note: "note\(sender.tag)")
         if sender.tag == colorsToTap.removeFirst() {
             
         } else {
@@ -128,11 +166,30 @@ class ViewController: UIViewController {
         sequenceIndex = 0
         actionButton.setTitle("Memoriza Ahora!", for: .normal)
         actionButton.isEnabled = false
-        view.isUserInteractionEnabled = false
+        contentGameView.isUserInteractionEnabled = false
         addNewColor()
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + .seconds(1)) {
             self.playSecuence()
         }
     }
+    
+    @IBAction func enableDisableSoundAction(_ sender: UIButton) {
+        enableDisableSound(button: sender)
+        switchMuted()
+    }
+
+    private func enableDisableSound(button: UIButton) {
+        if isMuted  {
+            button.setImage(soundActiveImage, for: .normal)
+        } else {
+            button.setImage(soundInactiveImage, for: .normal)
+        }
+    }
+    
+    private func switchMuted(){
+        isMuted = !isMuted
+        defaults.set(isMuted, forKey: "Muted")
+    }
+    
 }
 

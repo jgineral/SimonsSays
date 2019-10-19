@@ -9,6 +9,8 @@
 import UIKit
 
 class CircularButton: UIButton {
+    
+    @IBInspectable var hasAlpha: Bool = true
 
     override func awakeFromNib() {
         
@@ -18,7 +20,11 @@ class CircularButton: UIButton {
 
     override var isHighlighted: Bool {
         didSet {
-            alpha = isHighlighted ? 1.0 : 0.5
+            if hasAlpha {
+                alpha = isHighlighted ? 1.0 : 0.4
+            } else {
+                alpha = 1.0
+            }
         }
     }
 }
